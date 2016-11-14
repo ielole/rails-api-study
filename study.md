@@ -31,7 +31,11 @@ In your own words, define what the responsibilities of the model layer are in
 Rails.
 
 ```md
-<!-- your answer here -->
+Models are in charge of dealing with data. They communicate with the database
+and pass off their information to the controller.
+
+http://betterexplained.com/articles/intermediate-rails-understanding-models-views-and-controllers/
+http://betterexplained.com/articles/starting-ruby-on-rails-what-i-wish-i-knew/
 ```
 
 ## Define Controller Responsiblities
@@ -40,7 +44,16 @@ In your own words, define what the responsibilities of the controller layer are
 in Rails.
 
 ```md
-<!-- your answer here -->
+Controllers are the go-betweens which transfer information back and forth between
+the aspects of the application which the user touches and the model. The
+controller interprets the information, coming from either side, and processes it
+in a way that makes it accessable to either the user or the model.
+
+resources used:
+http://guides.rubyonrails.org/action_controller_overview.html
+http://guides.rubyonrails.org/routing.html
+http://betterexplained.com/articles/intermediate-rails-understanding-models-views-and-controllers/
+http://betterexplained.com/articles/starting-ruby-on-rails-what-i-wish-i-knew/
 ```
 
 ## Define Router Responsiblities
@@ -48,7 +61,13 @@ in Rails.
 In your own words, define what the router does in Rails.
 
 ```md
-<!-- your answer here -->
+Routers are in charge of matching incoming HTTP requests with specific
+controller actions.They also sometimes create file paths and URLs.
+
+resources used:
+http://guides.rubyonrails.org/routing.html
+http://betterexplained.com/articles/intermediate-rails-understanding-models-views-and-controllers/
+http://betterexplained.com/articles/starting-ruby-on-rails-what-i-wish-i-knew/
 ```
 
 ## The Request-Response Cycle in Rails
@@ -57,5 +76,21 @@ Starting with a client making a GET request to a particular URL, describe how
 the parts of Rails interact to produce and send a response.
 
 ```md
-<!-- your answer here -->
+1.) The client sends a GET request to a URL.
+2.) The router recieves the GET request and matches it with a Controller and
+constroller action.
+3.) The controller uses its action(s)/ methods to process the information so
+that the request is in a format that the model can understand.
+4.) The controller requests specific information from the Model.
+5.) The Model interacts with the database to retreive the requested information.
+6.) The Model passes the requested information to the controller.
+7.) The Controller processes the information from the model and makes it useable
+for the client.
+8.) The Client recieves the information that was requested.
+
+resources used:
+http://guides.rubyonrails.org/action_controller_overview.html
+http://guides.rubyonrails.org/routing.html
+http://betterexplained.com/articles/intermediate-rails-understanding-models-views-and-controllers/
+http://betterexplained.com/articles/starting-ruby-on-rails-what-i-wish-i-knew/
 ```
