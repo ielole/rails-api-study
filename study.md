@@ -34,6 +34,7 @@ Rails.
 Models are in charge of dealing with data. They communicate with the database
 and pass off their information to the controller.
 
+resources used:
 http://betterexplained.com/articles/intermediate-rails-understanding-models-views-and-controllers/
 http://betterexplained.com/articles/starting-ruby-on-rails-what-i-wish-i-knew/
 ```
